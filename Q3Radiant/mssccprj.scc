@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[Radiant.dsp]
+SCC_Aux_Path = "\\Limbo\limbo\VSS"
+SCC_Project_Name = "$/source/q3radiant", FEFAAAAA
+
+[Radiant_vc5.dsp]
+SCC_Aux_Path = "D:\Program Files\Microsoft Visual Studio\VSS"
+SCC_Project_Name = "$/source/q3radiant", FEFAAAAA

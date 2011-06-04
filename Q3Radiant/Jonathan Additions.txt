@@ -1,0 +1,25 @@
+November 2010
+204:
+
+Stopped models using dos compatable names (eg models/null_t~1/...),for win7 compatability 
+
+
+August 2010
+204:
+
+Fixed model face select crash (ctrl-shift-lmb on model face)
+
+
+April 2010
+204:
+
+Now compiles in MSVS 2008 (9.0)
+Mouse wheel zooming of 2d views
+picomodel integration
+modelscale & angles key support (not modelscale_vec (yet))
+alt+MMB in 3dview fits texture to brush face
+Changed colour of models to blue instead of pink
+Removed the grouping from G shortcut key
+Removed bug in model rendering where model was incorrectly rendering partially wireframe
+Increased maximum grid size to +-8192 units from +-4096
+Model Selection based on the model faces not its bounding box

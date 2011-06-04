@@ -1,0 +1,101 @@
+# Timo 
+# linux makefile attempt
+# compile with make -f makefile.linux
+# not functional yet .. core dumps on my box .. needs debugging
+
+CFLAGS = -I../common -g -Wall
+ODIR = /q3/q3map
+
+EXEBASE = q3map
+EXE = $(ODIR)/$(EXEBASE)
+
+default: $(EXE)
+
+clean:
+	rm -f $(ODIR)/*.o $(EXE)
+
+FILES = $(ODIR)/fog.o $(ODIR)/brush.o $(ODIR)/tjunction.o $(ODIR)/vis.o $(ODIR)/visflow.o \
+$(ODIR)/light.o $(ODIR)/lightmaps.o $(ODIR)/bspfile.o \
+$(ODIR)/cmdlib.o $(ODIR)/patch.o $(ODIR)/mesh.o $(ODIR)/nodraw.o $(ODIR)/glfile.o \
+$(ODIR)/leakfile.o $(ODIR)/map.o $(ODIR)/mathlib.o $(ODIR)/polylib.o $(ODIR)/aselib.o \
+$(ODIR)/imagelib.o $(ODIR)/portals.o $(ODIR)/prtfile.o $(ODIR)/bsp.o $(ODIR)/surface.o \
+$(ODIR)/scriplib.o $(ODIR)/shaders.o $(ODIR)/threads.o $(ODIR)/tree.o \
+$(ODIR)/writebsp.o $(ODIR)/facebsp.o $(ODIR)/misc_model.o $(ODIR)/light_trace.o \
+$(ODIR)/brush_primit.o
+
+$(EXE) : $(FILES)
+	gcc -o $(EXE) $(LDFLAGS) $(FILES) -lm
+
+$(ODIR)/surface.o : surface.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/fog.o : fog.c
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/brush.o : brush.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/tjunction.o : tjunction.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/lightmaps.o : lightmaps.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/brushbsp.o : brushbsp.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/facebsp.o : facebsp.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/patch.o : patch.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/mesh.o : mesh.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/misc_model.o : misc_model.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/nodraw.o : nodraw.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/glfile.o : glfile.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/leakfile.o : leakfile.c
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/map.o : map.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/portals.o : portals.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/prtfile.o : prtfile.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/bsp.o : bsp.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/tree.o : tree.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/shaders.o : shaders.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/writebsp.o : writebsp.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/csg.o : csg.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/brush_primit.o : brush_primit.c
+	gcc $(CFLAGS) -c $? -o $@
+ 
+$(ODIR)/vis.o : vis.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/visflow.o : visflow.c 
+	gcc $(CFLAGS) -c $? -o $@
+  
+$(ODIR)/light.o : light.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/light_trace.o : light_trace.c 
+	gcc $(CFLAGS) -c $? -o $@
+ 
+$(ODIR)/cmdlib.o : ../common/cmdlib.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/mathlib.o : ../common/mathlib.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/polylib.o : ../common/polylib.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/aselib.o : ../common/aselib.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/imagelib.o : ../common/imagelib.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/scriplib.o : ../common/scriplib.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/threads.o : ../common/threads.c 
+	gcc $(CFLAGS) -c $? -o $@
+$(ODIR)/bspfile.o : ../common/bspfile.c 
+	gcc $(CFLAGS) -c $? -o $@
+ 
+

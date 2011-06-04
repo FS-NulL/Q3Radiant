@@ -1,0 +1,185 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Curry"=..\Curry\Curry.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Tikka
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DeQbsp3"=..\DeQbsp3\DeQbsp3.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PakMan"=..\pk3man\PakMan.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PrtView"=..\PrtView\PrtView.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Radiant"=.\Radiant.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name cmdlib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name jpeg6
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name pak
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PakMan
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name mgs
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Curry
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PrtView
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TexTool"=..\Q3Plugin\TexTool\TexTool.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Tikka"=..\Tikka\Tikka.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "cmdlib"=..\Libs\cmdlib\cmdlib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "jpeg6"=..\libs\jpeg6\jpeg6.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "mgs"=..\MGSPlugin\dll\mgs.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "pak"=..\libs\pak\pak.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "q3map"=..\Q3Tools\q3map\q3map.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

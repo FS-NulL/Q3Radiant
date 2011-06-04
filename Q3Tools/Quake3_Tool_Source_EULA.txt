@@ -1,0 +1,213 @@
+	LIMITED PROGRAM SOURCE CODE LICENSE
+	RADIANT - LEVEL EDITOR AND TOOLS
+
+This Limited Program Source Code License · Radiant Level Editor (this 
+"Agreement") is between Id Software, Inc. ("Id Software") and you, the end-user 
+(the "Licensee" or "You") and is made effective beginning on the date on which 
+you, the Licensee, first download, install, load or otherwise use the computer 
+software code which accompanies this Agreement (the "Authorized Copy").  BY 
+DOWNLOADING, INSTALLING, LOADING OR OTHERWISE USING THE AUTHORIZED COPY, YOU, 
+THE LICENSEE, AGREE TO ALL THE TERMS AND CONDITIONS OF THIS AGREEMENT.  YOU 
+SHOULD READ THIS AGREEMENT CAREFULLY BEFORE DOWNLOADING, INSTALLING, LOADING OR 
+OTHERWISE USING THE AUTHORIZED COPY.
+
+1.	Grant of Rights.  The "Authorized Copy" shall generally refer to certain 
+computer software program source codes commonly known as Q3 RADIANT, Q3 MAP, Q3 
+ASM, and Q3 DATA and shall also generally refer to the compiled version of the 
+computer software program known as the Video Compiler.  Subject to your 
+agreement to, and full compliance with, the terms and provisions of this 
+Agreement, and subject to your prior agreement to be bound by the terms and 
+provisions of the LIMITED USE SOFTWARE LICENSE AGREEMENT which accompanies the 
+full version of the software game entitled QUAKE III ARENA (the "QUAKE III 
+License") and your full compliance with the QUAKE III License, Id Software 
+hereby grants to Licensee and Licensee hereby accepts, a limited and 
+non-exclusive right during the Term, as defined below, to: (i) use the 
+Authorized Copy for your creation of your own modifications which shall operate 
+only with the full version of QUAKE III ARENA or QUAKE III: TEAM ARENA  (the 
+"Games"), but not any demo, test or other version of the Games, such 
+modifications referred to in the QUAKE III License, and herein, as "New 
+Creations"; (ii) to make modifications to the Authorized Copy (your 
+"Modifications") for use in your creation of your own New Creations; (iii) 
+incorporate all or a portion of the Authorized Copy within your own New 
+Creations; and (iv) distribute, free of charge and at no cost, copies of the 
+Authorized Copy, so long as this Agreement accompanies each copy you make of the 
+Authorized Copy; provided, however, that the recipient of the Authorized Copy 
+must agree to be bound by the terms of this Agreement and the QUAKE III License 
+and that all such distribution of copies of the Authorized Copy must be by 
+electronic means only.  You must refer to the QUAKE III License in determining 
+your limited rights as to any New Creations which you may create.
+
+2.	Reservation of Rights and Prohibitions.  Id Software expressly reserves 
+all rights not granted in this Agreement.  You are not receiving any right or 
+license hereunder to copy, display, or make any other use of the Games, or any 
+element thereof, the trademark QUAKE III ARNEA or any other trademark of Id 
+Software, or the Id Software name.  Any use by Licensee of the Authorized Copy 
+not expressly permitted in Section 1. above is expressly prohibited and any such 
+unauthorized use shall constitute a material breach of this Agreement by 
+Licensee.  Any distribution of your Modifications must be by electronic means 
+only.  You shall not create any Modifications which infringe against any third 
+party right or which are libelous, defamatory, obscene, false, misleading or 
+otherwise illegal or unlawful.  You shall not rent, sell, lease, lend, offer on 
+a pay-for-play basis or otherwise commercially exploit or commercially 
+distribute the Authorized Copy or your Modifications.  You shall not copy, 
+distribute, or make other use of the Authorized Copy or your Modifications in 
+any infringing manner or in any manner which violates any law or third party 
+right and you shall not distribute or include with the Authorized Copy or your 
+Modifications any material which infringes against any third party right or 
+which is libelous, defamatory, obscene, false, misleading or otherwise illegal 
+or unlawful.  You shall conspicuously mark or label your New Creations and your 
+Modifications as your own creations and shall not mark or label either of them, 
+in any manner, as the creation of Id Software.  Licensee shall not copy, 
+reproduce, manufacture or distribute (free of charge or otherwise) the 
+Authorized Copy or your Modifications, in whole or in part, in any tangible 
+media, including, without limitation, a CD ROM.  Licensee shall not alter or 
+remove any legal notices, such as trademark and copyright notices, affixed by Id 
+Software on or within the Authorized Copy.  Licensee agrees that the Authorized 
+Copy and your Modifications will not be shipped, transferred or exported into 
+any country in violation of the U.S. Export Administration Act (or any other law 
+governing such matters) by Licensee or anyone at Licensee’s direction and that 
+Licensee will not utilize and will not authorize anyone to utilize, in any 
+manner, the Authorized Copy or your Modifications in violation of any applicable 
+law.  The Authorized Copy and your Modifications shall not be downloaded or 
+otherwise exported or re-exported into (or to a national or resident of) any 
+country to which the U.S. has embargoed goods or to anyone or into any country 
+who/which are prohibited, by applicable law, from receiving such property.  In 
+exercising Licensee’s limited rights hereunder, Licensee shall comply with all 
+applicable laws, regulations, ordinances, and statutes.
+
+3.	Intellectual Property Rights.  The Authorized Copy and all copyrights, 
+trademarks, and all other conceivable intellectual property rights related 
+thereto are owned by Id Software and are protected by United States copyright 
+laws and other applicable law.  Licensee must treat the Authorized Copy like any 
+other copyrighted material, as required by 17 U.S.C. §101, et. seq. and other 
+applicable law.  You agree to use your best efforts to ensure that any recipient 
+of the Authorized Copy fully complies with this Agreement.  Licensee shall have 
+no ownership or intellectual property rights in or to the Games or the 
+Authorized Copy, including, without limitation, all copyrights related thereto.  
+Licensee agrees that Licensee, by this Agreement, is only receiving a copy of 
+the Authorized Copy by limited license only, and not by sale, and that the 
+"first sale" doctrine of 17 U.S.C. §109 does not apply to your receipt or use of 
+the Authorized Copy.
+
+4.	Term and Termination.  The term of this Agreement and the license 
+granted herein begins on the date on which you first download, install, load or 
+otherwise use the Authorized Copy and shall expire, without notice to you or any 
+other notice, on December 31, 2005, unless this Agreement and the license 
+granted herein are terminated earlier as provided herein (the "Term").  
+NOTWITHSTANDING ANYTHING TO THE CONTRARY HEREIN, THIS AGREEMENT AND THE LICENSE 
+GRANTED TO YOU HEREIN SHALL IMMEDIATELY TERMINATE, WITHOUT THE REQUIREMENT OF 
+ANY NOTICE FROM ID SOFTWARE TO LICENSEE, UPON LICENSEE’S FAILURE TO COMPLY WITH 
+OR BREACH OF ANY TERM OR PROVISION OF THIS AGREEMENT OR THE QUAKE III LICENSE.  
+Upon the termination or expiration of this Agreement or your QUAKE III License, 
+any and all rights of Licensee hereunder shall terminate without prejudice to 
+any rights or claims Id Software may have, Licensee shall have no right to use 
+the Authorized Copy or your Modifications in any manner, Licensee shall 
+immediately destroy all copies of the Authorized Copy or your Modifications in 
+your possession, custody or control, and all rights granted hereunder shall 
+revert, without notice, to and be vested in Id Software.  Termination or 
+expiration of this Agreement shall not create any liability against Id Software 
+and shall not relieve Licensee from any liability which arises prior to 
+termination or expiration.
+
+5.	Indemnification.  Licensee hereby agrees to indemnify, defend, and hold 
+harmless Id Software and Id Software's successors, assigns, officers, directors, 
+employees, agents, representatives and licensees (but not including Licensee) 
+from and against all damages, claims, losses, causes of action and lawsuits 
+arising from and/or relating to a breach of this Agreement by Licensee and/or 
+Licensee's distribution or other use or non-use of the Authorized Copy or your 
+Modifications.
+
+6.	Limitation of Liability.  IN ANY CASE, ID SOFTWARE AND ID SOFTWARE’S 
+OFFICERS, DIRECTORS, EMPLOYEES, REPRESENTATIVES, AGENTS, LICENSEES, 
+SUBLICENSEES, SUCCESSORS AND ASSIGNS SHALL NOT BE LIABLE TO LICENSEE FOR LOSS OF 
+DATA, LOSS OF PROFITS, LOST SAVINGS, ACTUAL, SPECIAL, INCIDENTAL, CONSEQUENTIAL, 
+INDIRECT, OR PUNITIVE DAMAGES OR ANY OTHER DAMAGES ARISING FROM ANY ALLEGED 
+CLAIM FOR BREACH OF WARRANTY, BREACH OF CONTRACT, NEGLIGENCE, STRICT PRODUCT 
+LIABILITY, OR OTHER LEGAL THEORY, EVEN IF ID SOFTWARE OR ITS AGENTS HAVE BEEN 
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES OR RECEIVES NOTICE OF THE POSSIBILITY 
+OF ANY SUCH DAMAGES OR EVEN IF SUCH DAMAGES ARE FORESEEABLE, OR LIABLE FOR ANY 
+CLAIM BY ANY OTHER PARTY.  SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR 
+LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR 
+EXCLUSION MAY NOT APPLY TO LICENSEE.  THIS SECTION 6 SHALL SURVIVE CANCELLATION, 
+EXPIRATION OR TERMINATION OF THIS AGREEMENT.
+
+7.	Disclaimer of Warranties.  ID SOFTWARE EXPRESSLY DISCLAIMS ALL 
+WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, WITH 
+REGARD TO THE AUTHORIZED COPY, AND OTHERWISE.  THE AUTHORIZED COPY IS PROVIDED 
+"AS IS" AND WITHOUT WARRANTY.  ID SOFTWARE DOES NOT WARRANT THAT THE AUTHORIZED 
+COPY OR THE OPERATION THEREOF WILL BE ERROR FREE OR THAT THE AUTHORIZED COPY 
+WILL MEET LICENSEE’S SPECIAL REQUIREMENTS.  ADDITIONAL STATEMENTS, WHETHER ORAL 
+OR WRITTEN, DO NOT CONSTITUTE WARRANTIES BY ID SOFTWARE AND SHOULD NOT BE RELIED 
+UPON.  THIS SECTION 7 SHALL SURVIVE CANCELLATION, EXPIRATION OR TERMINATION OF 
+THIS AGREEMENT.
+
+8.	Governing Law, Venue and Remedies.  This Agreement shall be construed in 
+accordance with the applicable laws of the State of Texas and applicable United 
+States federal law.  Exclusive venue for all litigation regarding this Agreement 
+shall be in Dallas County, Texas, and you agree to submit to the jurisdiction of 
+the federal and state courts in Dallas County, Texas, for any such litigation.  
+In the event of a breach of this Agreement by Id Software, Licensee's sole 
+remedy shall be to terminate this Agreement by delivering written notice of 
+termination to Id Software.  In the event of a breach by Licensee of this 
+Agreement, Id Software may pursue all remedies to which Id Software is entitled 
+under applicable law and/or this Agreement.  Licensee agrees that Licensee's 
+unauthorized use of the Authorized Copy, or any part thereof, may immediately 
+and irreparably damage Id Software such that Id Software could not be adequately 
+compensated by a monetary award, and in such event, and at Id Software’s option, 
+Id Software shall be entitled to an injunctive order, in addition to all other 
+remedies available including a monetary award, to prohibit such unauthorized 
+use, without the necessity of Id Software posting bond or other security.  
+Failure of Id Software to enforce any provision of this Agreement shall not 
+constitute or be construed as a waiver of such provision or of the right to 
+enforce such provision.  In the event of litigation relating to this Agreement, 
+the prevailing litigant shall be entitled to recover the prevailing litigant’s 
+attorneys’ fees and expenses and costs of court in addition to all other relief 
+available under this Agreement and/or applicable law.
+
+9.	Licensee's Warranties.  Licensee warrants and represents that:   (i) 
+Licensee has full legal rights and authority to enter into and become bound by 
+the terms of this Agreement; (ii) Licensee has full legal rights and authority 
+to exercise Licensee’s rights granted herein and to comply with Licensee’s 
+obligations hereunder; and (iii) Licensee will comply, at all times during the 
+Term, with all applicable laws, as set forth hereinabove.
+
+10.	U.S. Government Restricted Rights.  To the extent applicable, the United 
+States Government shall only have those rights to use the Authorized Copy as 
+expressly stated and expressly limited and restricted in this Agreement, as 
+provided in 48 C.F.R. §§ 227.7201 through 227.7204, inclusive.
+
+11.	General Provisions.  This Agreement does not constitute and shall not be 
+construed as constituting a partnership or joint venture between Id Software and 
+Licensee.  Neither party hereto shall have any right to obligate or bind the 
+other party in any manner whatsoever, and nothing herein contained shall give, 
+or is intended to give, any rights of any kind to any third persons.  This 
+Agreement, along with the QUAKE III License, constitutes the entire 
+understanding between Licensee and Id Software regarding the subject matter 
+hereof.  If any provision of this Agreement is determined to be unenforceable by 
+a court of competent jurisdiction, you agree to a modification of such provision 
+to provide for enforcement of the intent of the parties hereto regarding such 
+provision, to the extent permitted by applicable law.  Except as noted herein in 
+regard to the QUAKE III License, no prior or present agreements or 
+representations between the parties hereto regarding the subject matter hereof 
+shall be binding upon the parties hereto unless incorporated in this Agreement.  
+No modification or change in this Agreement shall be valid or binding upon the 
+parties hereto unless in writing and executed by the parties to be bound 
+thereby.  This Agreement shall bind and inure to the benefit of Id Software, its 
+successors and assigns, and Id Software may assign its rights hereunder, in Id 
+Software's sole discretion.  This Agreement is personal to Licensee, and 
+Licensee shall not sublicense, assign, transfer, convey nor franchise its rights 
+granted hereunder.
+
+
+LICENSEE ACKNOWLEDGES LICENSEE HAS PREVIOUSLY ACCEPTED AND ENTERED INTO THE 
+QUAKE III LICENSE, THAT LICENSEE HAS READ THIS AGREEMENT, THAT LICENSEE 
+UNDERSTANDS THIS AGREEMENT, AND UNDERSTANDS THAT BY DOWNLOADING, INSTALLING, 
+LOADING OR OTHERWISE USING THE AUTHORIZED COPY, LICENSEE AGREES TO BE BOUND BY 
+THE TERMS AND CONDITIONS OF THIS AGREEMENT.  EXCEPT FOR WRITTEN SEPARATE 
+AGREEMENTS BETWEEN ID SOFTWARE AND LICENSEE, IF ANY, THIS AGREEMENT IS A 
+COMPLETE AND EXCLUSIVE STATEMENT OF THE RIGHTS AND LIABILITIES OF THE PARTIES 
+HERETO.  THIS AGREEMENT SUPERCEDES ALL PRIOR ORAL AGREEMENTS, PROPOSALS OR 
+UNDERSTANDINGS, AND ANY OTHER COMMUNICATIONS BETWEEN ID SOFTWARE AND LICENSEE, 
+IF ANY, RELATING TO THE SUBJECT MATTER OF THIS AGREEMENT, EXCEPT THE QUAKE III 
+LICENSE WHICH LICENSEE HAS ACCEPTED AND ENTERED INTO, AS ACKNOWLEDGED ABOVE
