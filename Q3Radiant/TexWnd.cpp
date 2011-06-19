@@ -69,7 +69,6 @@ int			current_x, current_y, current_row;
 
 // globals for textures
 int			  texture_nummenus;
-#define		MAX_TEXTUREDIRS	128
 char		  texture_menunames[MAX_TEXTUREDIRS][128];
 CPtrArray lstSubMenuHandles;
 
@@ -863,12 +862,37 @@ void BuildShaderList(class CStringList & lst)
   }
 }
 
+void MenuLetter2String(int l,char* s)
+{
+	if (l==0) // special case for 'other' group
+	{
+		strcpy(s,"0");
+		return;
+	}
+
+	l=l+64;
+	s[0] = (char) l;
+	s[1] = 0;
+}
+
+HMENU MenuLetter2Menu(char l,HMENU* list)
+{
+	if ((l >='a' && l<= 'z') || (l >='A' && l<= 'Z'))
+	{
+		l = l & ~32;
+		l=l-64;
+		return (list[l]);
+	}
+	else return list[0];
+}
+
 /*
 ==================
 FillTextureMenu
 
 ==================
 */
+// JN TODO: Add alphabetic list as base then normal list within
 void FillTextureMenu (CStringArray* pArray)
 {
 	HMENU	hmenu;
@@ -952,6 +976,122 @@ void FillTextureMenu (CStringArray* pArray)
       shaders.GetNext(pos);
     }
 
+	// JN ADD ALPHABET LIST HERE
+	bool alphabet[27];
+	for (int j=0;j<27;j++)                                //123456789012345678901234567
+		alphabet[j] = false; // Hide each letter by default 0ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+	temp = list;
+	while(temp)
+	{
+		// Check first letter
+		char letter = temp->dirname[0];
+		letter = tolower(letter);
+		switch(letter)
+		{
+		case 'a':
+			alphabet[1] = true;
+			break;
+		case 'b':
+			alphabet[2] = true;
+			break;
+		case 'c':
+			alphabet[3] = true;
+			break;
+		case 'd':
+			alphabet[4] = true;
+			break;
+		case 'e':
+			alphabet[5] = true;
+			break;
+		case 'f':
+			alphabet[6] = true;
+			break;
+		case 'g':
+			alphabet[7] = true;
+			break;
+		case 'h':
+			alphabet[8] = true;
+			break;
+		case 'i':
+			alphabet[9] = true;
+			break;
+		case 'j':
+			alphabet[10] = true;
+			break;
+		case 'k':
+			alphabet[11] = true;
+			break;
+		case 'l':
+			alphabet[12] = true;
+			break;
+		case 'm':
+			alphabet[13] = true;
+			break;
+		case 'n':
+			alphabet[14] = true;
+			break;
+		case 'o':
+			alphabet[15] = true;
+			break;
+		case 'p':
+			alphabet[16] = true;
+			break;
+		case 'q':
+			alphabet[17] = true;
+			break;
+		case 'r':
+			alphabet[18] = true;
+			break;
+		case 's':
+			alphabet[19] = true;
+			break;
+		case 't':
+			alphabet[20] = true;
+			break;
+		case 'u':
+			alphabet[21] = true;
+			break;
+		case 'v':
+			alphabet[22] = true;
+			break;
+		case 'w':
+			alphabet[23] = true;
+			break;
+		case 'x':
+			alphabet[24] = true;
+			break;
+		case 'y':
+			alphabet[25] = true;
+			break;
+		case 'z':
+			alphabet[26] = true;
+			break;
+				
+		default:
+			alphabet[0] = true;
+		}
+		temp=temp->next;
+	}
+
+	char tempstr[10];
+	HMENU alphamenus[27];
+
+	for (int j=0;j<27;j++)
+	{
+		if(alphabet[j] == true)
+		{
+			//AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
+			hSubMenu = CreateMenu();
+			lstSubMenuHandles.Add(hSubMenu);
+			MenuLetter2String(j,tempstr);
+			AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, tempstr);
+			alphamenus[j] = hSubMenu;
+		}
+	}
+
+	
+
     temp = list;
     while (temp)
 	  {
@@ -965,7 +1105,7 @@ void FillTextureMenu (CStringArray* pArray)
         if (temp->next && (strstr(temp->next->dirname, dirRoot)==temp->next->dirname))
         {
           hSubMenu = CreateMenu();
-					lstSubMenuHandles.Add(hSubMenu);
+		  lstSubMenuHandles.Add(hSubMenu);
           // keep going...
           do
           {
@@ -989,18 +1129,19 @@ void FillTextureMenu (CStringArray* pArray)
               strcat( strMsg, "\n" );
               Sys_Printf( strMsg );
               // push submenu and get out
-              AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
+              AppendMenu(MenuLetter2Menu(dirRoot[0],alphamenus)/*hmenu*/, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
               ClearDirList(&list);
               return;
             }
             temp = temp->next;
           } while (temp && (strstr(temp->dirname, dirRoot)==temp->dirname));
-          AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
+          AppendMenu(/*hmenu*/MenuLetter2Menu(dirRoot[0],alphamenus), MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
+		  //MenuLetter2Menu(dirRoot[0],alphamenus);
           continue;
         }
       }
 
-		  AppendMenu (hmenu, MF_ENABLED|MF_STRING, CMD_TEXTUREWAD+texture_nummenus, (LPCTSTR)temp->dirname);
+		  AppendMenu (MenuLetter2Menu(temp->dirname[0],alphamenus)/*hmenu*/, MF_ENABLED|MF_STRING, CMD_TEXTUREWAD+texture_nummenus, (LPCTSTR)temp->dirname);
 		  strcpy (texture_menunames[texture_nummenus], temp->dirname);
 		  strcat (texture_menunames[texture_nummenus], "/");
       if (pArray)

@@ -255,7 +255,7 @@ SKeyInfo g_Keys[] =
 
 int g_nKeyCount = sizeof(g_Keys) / sizeof(SKeyInfo);
 
-const int CMD_TEXTUREWAD_END = CMD_TEXTUREWAD + 127;
+const int CMD_TEXTUREWAD_END = CMD_TEXTUREWAD + MAX_TEXTUREDIRS-1;//127;
 const int CMD_BSPCOMMAND_END = CMD_BSPCOMMAND + 127;
 const int IDMRU_END = IDMRU+9;
 
