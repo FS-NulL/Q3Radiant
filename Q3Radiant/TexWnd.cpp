@@ -21,6 +21,8 @@ Str m_gStr;
 static char THIS_FILE[] = __FILE__;
 #endif
 
+#define FOLDER_CONTRACT_SIZE 65
+
 #define	TYP_MIPTEX	68
 static unsigned	tex_palette[256];
 
@@ -982,8 +984,10 @@ void FillTextureMenu (CStringArray* pArray)
 		alphabet[j] = false; // Hide each letter by default 0ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 	temp = list;
+	int foldercount=0;
 	while(temp)
 	{
+		foldercount++;
 		// Check first letter
 		char letter = temp->dirname[0];
 		letter = tolower(letter);
@@ -1077,16 +1081,19 @@ void FillTextureMenu (CStringArray* pArray)
 	char tempstr[10];
 	HMENU alphamenus[27];
 
-	for (int j=0;j<27;j++)
+	if (foldercount > FOLDER_CONTRACT_SIZE)
 	{
-		if(alphabet[j] == true)
+		for (int j=0;j<27;j++)
 		{
-			//AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
-			hSubMenu = CreateMenu();
-			lstSubMenuHandles.Add(hSubMenu);
-			MenuLetter2String(j,tempstr);
-			AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, tempstr);
-			alphamenus[j] = hSubMenu;
+			if(alphabet[j] == true)
+			{
+				//AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
+				hSubMenu = CreateMenu();
+				lstSubMenuHandles.Add(hSubMenu);
+				MenuLetter2String(j,tempstr);
+				AppendMenu(hmenu, MF_POPUP, (UINT_PTR)hSubMenu, tempstr);
+				alphamenus[j] = hSubMenu;
+			}
 		}
 	}
 
@@ -1129,19 +1136,19 @@ void FillTextureMenu (CStringArray* pArray)
               strcat( strMsg, "\n" );
               Sys_Printf( strMsg );
               // push submenu and get out
-              AppendMenu(MenuLetter2Menu(dirRoot[0],alphamenus)/*hmenu*/, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
+			  AppendMenu( (foldercount > FOLDER_CONTRACT_SIZE) ? MenuLetter2Menu(dirRoot[0],alphamenus) : hmenu, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
               ClearDirList(&list);
               return;
             }
             temp = temp->next;
           } while (temp && (strstr(temp->dirname, dirRoot)==temp->dirname));
-          AppendMenu(/*hmenu*/MenuLetter2Menu(dirRoot[0],alphamenus), MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
+		  AppendMenu((foldercount > FOLDER_CONTRACT_SIZE) ? MenuLetter2Menu(dirRoot[0],alphamenus) : hmenu, MF_POPUP, (UINT_PTR)hSubMenu, dirRoot);
 		  //MenuLetter2Menu(dirRoot[0],alphamenus);
           continue;
         }
       }
 
-		  AppendMenu (MenuLetter2Menu(temp->dirname[0],alphamenus)/*hmenu*/, MF_ENABLED|MF_STRING, CMD_TEXTUREWAD+texture_nummenus, (LPCTSTR)temp->dirname);
+	  AppendMenu ((foldercount > FOLDER_CONTRACT_SIZE) ? MenuLetter2Menu(temp->dirname[0],alphamenus) : hmenu, MF_ENABLED|MF_STRING, CMD_TEXTUREWAD+texture_nummenus, (LPCTSTR)temp->dirname);
 		  strcpy (texture_menunames[texture_nummenus], temp->dirname);
 		  strcat (texture_menunames[texture_nummenus], "/");
       if (pArray)
