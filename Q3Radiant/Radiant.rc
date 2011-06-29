@@ -738,16 +738,17 @@ BEGIN
             MENUITEM "Select &Inside",              ID_SELECTION_SELECTINSIDE
         END
         MENUITEM SEPARATOR
-        POPUP "Group"
-        BEGIN
-            MENUITEM "Add to...",                   ID_DROP_GROUP_ADDTO
-            MENUITEM "Remove",                      ID_DROP_GROUP_REMOVE
-            MENUITEM SEPARATOR
-            MENUITEM "Name...",                     ID_DROP_GROUP_NAME
-            MENUITEM SEPARATOR
-            MENUITEM "New Group...",                ID_DROP_GROUP_NEWGROUP
-        END
-        MENUITEM "Ungroup entity",              ID_SELECTION_UNGROUPENTITY
+        //POPUP "Group"
+        //BEGIN
+        //    MENUITEM "Add to...",                   ID_DROP_GROUP_ADDTO
+        //    MENUITEM "Remove",                      ID_DROP_GROUP_REMOVE
+        //    MENUITEM SEPARATOR
+        //    MENUITEM "Name...",                     ID_DROP_GROUP_NAME
+        //    MENUITEM SEPARATOR
+        //    MENUITEM "New Group...",                ID_DROP_GROUP_NEWGROUP
+        //END
+        MENUITEM "Push to Entity",              ID_SELECTION_PUSH
+		MENUITEM "Ungroup entity",              ID_SELECTION_UNGROUPENTITY
         MENUITEM "Make detail",                 ID_SELECTION_MAKE_DETAIL
         MENUITEM "Make structural",             ID_SELECTION_MAKE_STRUCTURAL
     END

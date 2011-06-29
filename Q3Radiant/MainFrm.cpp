@@ -358,6 +358,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_COMMAND(ID_SELECTION_SELECTINSIDE, OnSelectionSelectinside)
 	ON_COMMAND(ID_SELECTION_SELECTPARTIALTALL, OnSelectionSelectpartialtall)
 	ON_COMMAND(ID_SELECTION_SELECTTOUCHING, OnSelectionSelecttouching)
+	ON_COMMAND(ID_SELECTION_PUSH, OnSelectionPushEntity)
 	ON_COMMAND(ID_SELECTION_UNGROUPENTITY, OnSelectionUngroupentity)
 	ON_COMMAND(ID_TEXTURES_POPUP, OnTexturesPopup)
 	ON_COMMAND(ID_POPUP_SELECTION, OnPopupSelection)
@@ -553,7 +554,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_COMMAND(ID_TEXTURES_SHADERS_SHOW, OnTexturesShadersShow)
 	ON_COMMAND(ID_VIEW_GROUPS, OnViewGroups)
 	ON_COMMAND(ID_DROP_GROUP_ADDTO_WORLD, OnDropGroupAddtoWorld)
-	ON_COMMAND(ID_DROP_GROUP_NAME, OnDropGroupName)
+	//ON_COMMAND(ID_DROP_GROUP_NAME, OnDropGroupName)
 	ON_COMMAND(ID_DROP_GROUP_NEWGROUP, OnDropGroupNewgroup)
 	ON_COMMAND(ID_DROP_GROUP_REMOVE, OnDropGroupRemove)
 	ON_COMMAND(ID_VIEW_SHOWWORKZONE, OnViewShowWorkzone)
@@ -710,7 +711,7 @@ void CMainFrame::SetButtonMenuStates()
 	}
   if (g_qeglobals.d_project_entity)
   {
-    FillTextureMenu();      // redundant but i'll clean it up later.. yeah right.. 
+      FillTextureMenu();      // redundant but i'll clean it up later.. yeah right.. 
 	  FillBSPMenu();
 	  LoadMruInReg(g_qeglobals.d_lpMruMenu,"Software\\id\\QuakeEd4\\MRU");
     PlaceMenuMRUItem(g_qeglobals.d_lpMruMenu,::GetSubMenu(::GetMenu(GetSafeHwnd()),0), ID_FILE_EXIT);
@@ -1811,6 +1812,7 @@ void CMainFrame::OnSize(UINT nType, int cx, int cy)
 void OpenDialog (void);
 void SaveAsDialog (bool bRegion);
 void  Select_Ungroup (void);
+void  Select_PushEntity (void);
 
 void CMainFrame::ToggleCamera()
 {
@@ -2754,6 +2756,11 @@ void CMainFrame::OnSelectionSelecttouching()
 void CMainFrame::OnSelectionUngroupentity() 
 {
 	Select_Ungroup();
+}
+
+void CMainFrame::OnSelectionPushEntity()
+{
+	Select_PushEntity();
 }
 
 void CMainFrame::OnTexturesPopup() 

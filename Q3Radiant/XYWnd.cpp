@@ -161,6 +161,7 @@ BEGIN_MESSAGE_MAP(CXYWnd, CWnd)
 	ON_COMMAND(ID_SELECTION_SELECTPARTIALTALL, CMainFrame::OnSelectionSelectpartialtall)
 	ON_COMMAND(ID_SELECTION_SELECTTOUCHING, CMainFrame::OnSelectionSelecttouching)
 	ON_COMMAND(ID_SELECTION_UNGROUPENTITY, CMainFrame::OnSelectionUngroupentity)
+	ON_COMMAND(ID_SELECTION_PUSH, CMainFrame::OnSelectionPushEntity)
 	//}}AFX_MSG_MAP
   ON_COMMAND_RANGE(ID_ENTITY_START, ID_ENTITY_END, OnEntityCreate)
 END_MESSAGE_MAP()
@@ -1456,7 +1457,7 @@ void CXYWnd::HandleDrop()
     m_mnuDrop.AppendMenu(MF_POPUP, reinterpret_cast<unsigned int>(pChild2->GetSafeHmenu()), "Select");
     m_mnuDrop.AppendMenu(MF_SEPARATOR, nID++, "");
 
-    CMenu* pChild3 = new CMenu;
+    /*CMenu* pChild3 = new CMenu;
     pChild3->CreateMenu();
     pChild3->AppendMenu(MF_STRING, ID_DROP_GROUP_ADDTO, "Add to...");
     pChild3->AppendMenu(MF_STRING, ID_DROP_GROUP_REMOVE, "Remove");
@@ -1464,9 +1465,10 @@ void CXYWnd::HandleDrop()
     pChild3->AppendMenu(MF_SEPARATOR, nID++, "");
     pChild3->AppendMenu(MF_STRING, ID_DROP_GROUP_NEWGROUP, "New Group...");
     m_mnuDrop.AppendMenu(MF_POPUP, reinterpret_cast<unsigned int>(pChild3->GetSafeHmenu()), "Group");
-    m_mnuDrop.AppendMenu(MF_SEPARATOR, nID++, "");
+    m_mnuDrop.AppendMenu(MF_SEPARATOR, nID++, "");*///ID_SELECTION_PUSH
 
-    m_mnuDrop.AppendMenu(MF_STRING, ID_SELECTION_UNGROUPENTITY, "Ungroup Entity");
+    m_mnuDrop.AppendMenu(MF_STRING, ID_SELECTION_PUSH, "Push to Entity");
+	m_mnuDrop.AppendMenu(MF_STRING, ID_SELECTION_UNGROUPENTITY, "Ungroup Entity");
     m_mnuDrop.AppendMenu(MF_STRING, ID_SELECTION_MAKE_DETAIL, "Make Detail");
     m_mnuDrop.AppendMenu(MF_STRING, ID_SELECTION_MAKE_STRUCTURAL, "Make Structural");
     m_mnuDrop.AppendMenu(MF_SEPARATOR, nID++, "");

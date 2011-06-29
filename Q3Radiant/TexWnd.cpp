@@ -894,7 +894,7 @@ FillTextureMenu
 
 ==================
 */
-// JN TODO: Add alphabetic list as base then normal list within
+// JN: Added alphabetic list as base then normal list within (for last folder lists)
 void FillTextureMenu (CStringArray* pArray)
 {
 	HMENU	hmenu;
@@ -911,7 +911,7 @@ void FillTextureMenu (CStringArray* pArray)
 
   if (g_pParentWnd->GetPlugInMgr().GetTextureInfo() != NULL)
   {
-    if (g_pParentWnd->GetPlugInMgr().GetTextureInfo()->m_bWadStyle)
+    if (g_pParentWnd->GetPlugInMgr().GetTextureInfo()->m_bWadStyle);
       return;
   }
 

@@ -1385,6 +1385,58 @@ void Select_Inside (void)
 
 /*
 =============
+Select_PushEntity
+
+Move world brushes into an entity
+=============
+*/
+void Select_PushEntity(void)
+{
+	entity_t *se=0; // Selected entity to push brushes to
+	brush_t *sb;
+
+	// Walk selected brush list to find first non worldspawn entity
+	for (sb = selected_brushes.next; sb != &selected_brushes; sb = sb->next)
+	{
+		// Find a non wolrdspawn entity
+		if(sb->owner != world_entity)
+		{
+			se = sb->owner;
+			break;
+		}
+	}
+	
+	if(se==0) return; // return on entity no found
+
+	if(se->eclass->fixedsize != 0)  // Check that sb is not a point entity
+	{
+		MessageBox( g_qeglobals.d_hwndMain, "I'm not going to move brushes into a point entity you silly human.", "No! No! No!", MB_OK );
+		return;
+	}
+
+	unsigned int count = 0;
+	char *type=0;
+	type = ValueForKey (se, "classname");
+	if (type == 0) return; // return if the entity doesn't have a classname
+
+	for (sb = selected_brushes.next; sb != &selected_brushes; sb = sb->next)
+	{
+		if(sb->owner == world_entity)
+		{
+			// Move world brushes to entity
+			Entity_UnlinkBrush (sb);
+			Entity_LinkBrush (se, sb);
+			Brush_Build( sb );
+			sb->owner = se;
+			count++;
+		}
+	}
+	
+	Sys_Printf( count == 1 ? "Moved %u world brush into %s entity.\n" : "Moved %u world brushes into %s entity.\n",count, type);
+}
+
+/*
+=============
 Select_Ungroup
 
 Turn the currently selected entity back into normal brushes

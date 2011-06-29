@@ -560,7 +560,7 @@
 #define ID_DROP_GROUP_REMOVE            33016
 #define ID_DROP_GROUP_ADDTO_WORLD       33017
 #define ID_DROP_GROUP_NEWGROUP          33018
-#define ID_DROP_GROUP_NAME              33019
+#define ID_SELECTION_PUSH	            33019 /*ID_DROP_GROUP_NAME */
 #define ID_DROP_GROUP_ADDTO             33020
 #define ID_VIEW_SHOWWORKZONE            33022
 #define ID_TEXTURE_FLUSH                33023

@@ -247,6 +247,7 @@ public:
 	afx_msg void OnSelectionSelectpartialtall();
 	afx_msg void OnSelectionSelecttouching();
 	afx_msg void OnSelectionUngroupentity();
+	afx_msg void OnSelectionPushEntity();
 	afx_msg void OnTexturesPopup();
 	afx_msg void OnPopupSelection();
 	afx_msg void OnViewChange();

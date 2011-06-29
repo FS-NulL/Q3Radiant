@@ -4,6 +4,13 @@ $NulL's fork of Q3Radiant
 
 Notable aditions:
 
+June 2011
+204:
+
+Added alpabetic sub folders to the texture menu to ease finding texture folders when there are many texture folders.
+Removed brush grouping altogether.
+Allow worldspawn brushes to be pushed into an entity.
+
 November 2010
 204:
 

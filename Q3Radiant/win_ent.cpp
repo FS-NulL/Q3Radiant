@@ -243,7 +243,7 @@ void GetEntityControls(HWND ghwndEntity)
 
   g_wndTabs.SubclassDlgItem(IDC_TAB_MODE, CWnd::FromHandle(ghwndEntity));
   hwndEnt[EntTab] = g_wndTabs.GetSafeHwnd();
-  g_wndTabs.InsertItem(0, "Groups");
+  //g_wndTabs.InsertItem(0, "Groups");
   ::SetParent(g_wndTabs.GetSafeHwnd(), g_qeglobals.d_hwndEntity);
 
   if (g_pParentWnd->CurrentStyle() > 0 && g_pParentWnd->CurrentStyle() < 3)
@@ -448,14 +448,14 @@ void SetInspectorMode(int iType)
       g_wndTabs.SetCurSel(2);
 		break;
 
-  case W_GROUP:
+  /*case W_GROUP:
 		SetWindowText(g_qeglobals.d_hwndEntity, "Groups");		
 		EnableMenuItem( hMenu, ID_MISC_SELECTENTITYCOLOR, MF_GRAYED | MF_DISABLED | MF_BYCOMMAND );
     if (g_pParentWnd->CurrentStyle() > 0 && g_pParentWnd->CurrentStyle() < 3)
       g_wndTabs.SetCurSel(3);
     else
       g_wndTabs.SetCurSel(1);
-		break;
+		break;*/
 
 
 	default:
