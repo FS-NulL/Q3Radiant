@@ -911,7 +911,7 @@ void FillTextureMenu (CStringArray* pArray)
 
   if (g_pParentWnd->GetPlugInMgr().GetTextureInfo() != NULL)
   {
-    if (g_pParentWnd->GetPlugInMgr().GetTextureInfo()->m_bWadStyle);
+    if (g_pParentWnd->GetPlugInMgr().GetTextureInfo()->m_bWadStyle)
       return;
   }
 

@@ -1406,9 +1406,9 @@ void Select_PushEntity(void)
 		}
 	}
 	
-	if(se==0) return; // return on entity no found
+	if(se==0) return; // return on entity not found
 
-	if(se->eclass->fixedsize != 0)  // Check that sb is not a point entity
+	if(se->eclass->fixedsize != 0)  // Check that se is not a point entity
 	{
 		MessageBox( g_qeglobals.d_hwndMain, "I'm not going to move brushes into a point entity you silly human.", "No! No! No!", MB_OK );
 		return;
