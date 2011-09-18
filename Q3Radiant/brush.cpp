@@ -3642,6 +3642,7 @@ bool PaintedModel(brush_t *b, bool bOkToTexture)
 	  // use angles yes or no?
 	  bool useAngles;
 	  if ( (angles[0] != 0.0f) || (angles[1] != 0.0f) || (angles[2] != 0.0f) ) useAngles = true;
+	  else useAngles = false;
 
       while (model != NULL)
       {
@@ -3722,8 +3723,28 @@ bool PaintedModel(brush_t *b, bool bOkToTexture)
 
 	    // Grab model scale
 		float modelscale;
+		vec3_t modelscale_vec,temp_vec;
 		modelscale = FloatForKey(b->owner,"modelscale");
-		if (modelscale == 0.0f) modelscale = 1.0f;
+		if (modelscale == 0.0f) 
+		{
+			modelscale = 1.0f;			
+		}
+
+		modelscale_vec[0] = modelscale;
+		modelscale_vec[1] = modelscale;
+		modelscale_vec[2] = modelscale;
+
+		GetVectorForKey(b->owner,"modelscale_vec",modelscale_vec);
+		/*if(temp_vec[0] != 0.0f)
+		{
+			modelscale_vec[0] = temp_vec[0];
+			modelscale_vec[1] = temp_vec[1];
+			modelscale_vec[2] = temp_vec[2];
+		}*/
+
+		//Sys_Printf("angle:%f angles:%f %f %f modelscale:%f modelscale_vec:%f %f %f useAngles:%d\n",
+		//	a,angles[0],angles[1],angles[2],modelscale,modelscale_vec[0],modelscale_vec[1],modelscale_vec[2],useAngles);
+
 
         vec5_t vTest[3];
         for (i = 0; i < model->nTriCount; i++)
@@ -3733,9 +3754,9 @@ bool PaintedModel(brush_t *b, bool bOkToTexture)
 #if 1
 			  //JONATHAN Model scale here?
 			// x = vertex position (*scale) + origin pos
-            float x = model->pTriList[i].v[j][0]*modelscale + v[0];
-            float y = model->pTriList[i].v[j][1]*modelscale + v[1];
-			float z = model->pTriList[i].v[j][2]*modelscale + v[2];
+            float x = model->pTriList[i].v[j][0]*modelscale_vec[0] + v[0];
+            float y = model->pTriList[i].v[j][1]*modelscale_vec[1] + v[1];
+			float z = model->pTriList[i].v[j][2]*modelscale_vec[2] + v[2];
 			// JONATHAN Replace with 3axis 'angles' rotation
             if (a && !useAngles)
             {				

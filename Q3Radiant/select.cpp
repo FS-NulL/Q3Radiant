@@ -119,6 +119,12 @@ bool Model_Ray (entity_t *e,vec3_t origin, vec3_t dir, brush_t *b, float *dist)
 	float modelscale = atof(value);
 	if (modelscale == 0) modelscale = 1;
 
+	vec3_t modelscale_vec;
+	modelscale_vec[0] = modelscale;
+	modelscale_vec[1] = modelscale;
+	modelscale_vec[2] = modelscale;
+	GetVectorForKey(e,"modelscale_vec",modelscale_vec);
+
 	vec3_t vSin;
     vec3_t vCos;
     VectorClear(vSin);
@@ -141,9 +147,9 @@ bool Model_Ray (entity_t *e,vec3_t origin, vec3_t dir, brush_t *b, float *dist)
 			for (int i=0; i < model->nTriCount; i++)
 			{
 				// Need to translate and rotate vertexes first
-				VectorTransformFast(model->pTriList[i].v[0],vCos,vSin,e->origin,modelscale,t0);
-				VectorTransformFast(model->pTriList[i].v[1],vCos,vSin,e->origin,modelscale,t1);
-				VectorTransformFast(model->pTriList[i].v[2],vCos,vSin,e->origin,modelscale,t2);
+				VectorTransformFast(model->pTriList[i].v[0],vCos,vSin,e->origin,modelscale_vec[0],t0);
+				VectorTransformFast(model->pTriList[i].v[1],vCos,vSin,e->origin,modelscale_vec[1],t1);
+				VectorTransformFast(model->pTriList[i].v[2],vCos,vSin,e->origin,modelscale_vec[2],t2);
 				if (Triangle_Intersect(origin, dir, t0, t2, t1, dist)) return true;
 			}
 			// Get the next surface in the model
