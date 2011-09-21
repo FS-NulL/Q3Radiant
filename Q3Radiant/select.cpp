@@ -10,7 +10,7 @@ CPtrArray g_SelectedFaceBrushes;
 CPtrArray& g_ptrSelectedFaces = g_SelectedFaces;
 CPtrArray& g_ptrSelectedFaceBrushes = g_SelectedFaceBrushes;
 
-void VectorTransformFast(vec3_t vin, vec3_t vCos, vec3_t vSin, vec3_t translate,float scale, vec3_t vout)
+void VectorTransformFast(vec3_t vin, vec3_t vCos, vec3_t vSin, vec3_t translate,vec3_t scale, vec3_t vout)
 {
 	float x2,y2,z2;
 
@@ -146,10 +146,12 @@ bool Model_Ray (entity_t *e,vec3_t origin, vec3_t dir, brush_t *b, float *dist)
 			// Loop triangles
 			for (int i=0; i < model->nTriCount; i++)
 			{
-				// Need to translate and rotate vertexes first
-				VectorTransformFast(model->pTriList[i].v[0],vCos,vSin,e->origin,modelscale_vec[0],t0);
-				VectorTransformFast(model->pTriList[i].v[1],vCos,vSin,e->origin,modelscale_vec[1],t1);
-				VectorTransformFast(model->pTriList[i].v[2],vCos,vSin,e->origin,modelscale_vec[2],t2);
+				// Need to translate and rotate vertexes first // TODO:: change Vector transform fast to handle 3 scale arguments, not one!!!
+				VectorTransformFast(model->pTriList[i].v[0],vCos,vSin,e->origin,modelscale_vec,t0);
+				VectorTransformFast(model->pTriList[i].v[1],vCos,vSin,e->origin,modelscale_vec,t1);
+				VectorTransformFast(model->pTriList[i].v[2],vCos,vSin,e->origin,modelscale_vec,t2); 
+					
+
 				if (Triangle_Intersect(origin, dir, t0, t2, t1, dist)) return true;
 			}
 			// Get the next surface in the model

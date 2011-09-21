@@ -111,6 +111,13 @@ void VectorScale (vec3_t v, vec_t scale, vec3_t out)
 	out[2] = v[2] * scale;
 }
 
+void VectorScale (vec3_t v, vec3_t scale, vec3_t out)
+{
+	out[0] = v[0] * scale[0];
+	out[1] = v[1] * scale[1];
+	out[2] = v[2] * scale[2];
+}
+
 
 void VectorRotate (vec3_t vIn, vec3_t vRotation, vec3_t out)
 {
